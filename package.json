@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build":"sucrase ./src -d ./dist --transforms imports",
+    "prestart": "sucrase ./src -d ./dist --transforms imports",
     "start": "node dist/server.js",
     "dev": "nodemon src/server",
     "dev:debug": "nodemon --inspect src/server.js",
