@@ -4,7 +4,6 @@
   "main": "./src/server.js",
   "author": "@salvattori",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "prestart": "sucrase ./src -d ./dist --transforms imports",
     "start": "node dist/server.js",
