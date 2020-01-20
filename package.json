@@ -1,10 +1,13 @@
 {
   "name": "api_node",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/server.js",
   "author": "@salvattori",
   "license": "MIT",
+  "type": "module",
   "scripts": {
+    "build":"sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js",
     "dev": "nodemon src/server",
     "dev:debug": "nodemon --inspect src/server.js",
     "test": "jest"
