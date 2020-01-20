@@ -1,4 +1,5 @@
 # ApiNode
+https://sky-challenge.herokuapp.com/
 ## Firsts steps
  frist create an `.env` file and set
  - MONGO_DB_CONNECTION
@@ -10,8 +11,6 @@
 ### Run server
  run `yarn dev`
 
-
-Heroku URL
 
 
 ## How to use THE API
