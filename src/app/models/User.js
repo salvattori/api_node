@@ -5,8 +5,6 @@ import JWT from 'jsonwebtoken';
 
 import config from '../../config';
 
-require('mongoose-uuid2')(mongoose);
-
 const saltRounds = 10;
 const UserSchema = new Schema({
   _id: { type: String, default: uuid },
@@ -21,9 +19,11 @@ const UserSchema = new Schema({
 });
 
 UserSchema.pre('save', function(next) {
+  this._id = uuid();
   this.token = JWT.sign({ id: this._id }, config.secret, {
     expiresIn: config.expiration,
   });
+
   this.senha = bcrypt.hashSync(this.senha, saltRounds);
   next();
 });

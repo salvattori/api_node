@@ -21,7 +21,6 @@
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.9",
-    "mongoose-uuid2": "^2.3.0",
     "uuid": "^3.4.0",
     "yup": "^0.28.0",
     "sucrase": "^3.12.1"
