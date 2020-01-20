@@ -5,7 +5,6 @@ import User from '../models/User';
 
 class SessionController {
   async signup(req, res) {
-    console.log('config:: ', config.mongoURL);
     try {
       if (await User.exists({ email: req.body.email }))
         return res.status(400).json({ message: 'E-mail já existe' });

@@ -8,7 +8,6 @@ class DataBase {
   }
 
   init() {
-    console.log('url:::', config.mongoURL);
     mongoose.Promise = Promise;
     mongoose.connect(config.mongoURL, {
       useNewUrlParser: true,
